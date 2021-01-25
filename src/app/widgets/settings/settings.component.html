@@ -1,0 +1,37 @@
+<nav>
+    <div class="side-container justify-content-center">
+        <div class="container-blurry">
+            <h4 style="text-align: center; margin-top: 16px; color: white;">Sort By</h4>
+            <div class="item-container">
+                <div class="container-blurry">
+                    <div class="row container-blurry" (click)="sortBy(true)">
+                        <div class="col-lg-8">
+                            <h6>Ascending ID</h6>
+                        </div>
+                        <div class="col-lg-4 pl-2">
+                            <img *ngIf="!asc" src="../../../assets/img/uncheck-icon.svg" alt="">
+                            <img *ngIf="asc" src="../../../assets/img/check-icon.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="row container-blurry mt-2 " (click)="sortBy(false)">
+                        <div class="col-lg-8">
+                            <h6>Descending ID</h6>
+                        </div>
+                        <div class="col-lg-4 pl-2">
+                            <img *ngIf="!desc" src="../../../assets/img/uncheck-icon.svg" alt="">
+                            <img *ngIf="desc" src="../../../assets/img/check-icon.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="container-blurry">
+
+                    <h6 class="w-100 text-center">Showing page {{activePage}} of {{pages.length}} </h6>
+                    <div class="d-flex justify-content-center">
+                        <h6 class="w-100 text-center underline" (click)="onClickPage(activePage - 1)">👈 Prev</h6>
+                        <h6 class="w-100 text-center underline" (click)="onClickPage(activePage + 1)">Next 👉</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,52 @@
+nav {
+    height: 90vh;
+    width: 100%;
+    .side-container {
+        height: 100%;
+        width: 100%;
+        padding: 8px;
+        .container-blurry {
+            height: fit-content;
+            width: 100%;
+            .item-container {
+                padding: 16px;
+                width: 100%;
+                height: calc(100% - 64px);
+                overflow-y: scroll;
+                .container-blurry {
+                    width: 100%;
+                    padding: 8px;
+                    margin-bottom: 8px;
+                    align-items: center;
+                    cursor: pointer;
+
+                    h6 {
+                        color: white;
+                        font-size: medium;
+                        span {
+                            color: rgba(255, 255, 255, 0.5);
+                        }
+                    }
+                    .container-blurry {
+                        margin: 0;
+                        height: fit-content;
+                        &:hover {
+                            &:before {
+                                background: rgba(255, 255, 255, 0.4);
+                                backdrop-filter: blur(10px);
+                                border-radius: 16px;
+                            }
+                        }
+                    }
+
+                    .underline:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+}

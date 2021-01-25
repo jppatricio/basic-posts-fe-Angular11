@@ -1,0 +1,100 @@
+.container-fluid{
+    // Full size container with image as background
+    background-image: url('../../../../assets/img/background.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    .open-users{
+        display: none;
+    }
+
+    .open-settings{
+        display: none;
+    }
+
+    .floating-back{
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: large;
+        cursor: pointer;
+        &:hover{
+            color: rgba(255, 255, 255, 1);
+        }
+    }
+
+    position: relative;
+
+    .center-side{
+        position: absolute;
+        width: 60vw;
+        left: 20vw;
+        right: 20vw;
+    }
+
+    .left-side{
+        position: absolute;
+        width: 20vw;
+        display: block;
+    }
+
+    .right-side{
+        position: absolute;
+        width: 20vw;
+        right: 0;
+        display: block;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .container-fluid{
+        .h4-title{
+            font-size: small;
+        }
+        
+        .floating-back{
+            color: rgba(255, 255, 255, 0.8);
+            font-size: xx-large;
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            cursor: pointer;
+            &:hover{
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+    
+        position: relative;
+
+        .open-users{
+            display: block;
+        }
+
+        .open-settings{
+            display: block;
+        }
+    
+        .center-side{
+            position: absolute;
+            width: 95vw;
+            left: 2.5vw;
+            right: 2.5vw;
+        }
+    
+        .left-side{
+            position: absolute;
+            width: 100vw;
+
+            display: none;
+        }
+    
+        .right-side{
+            position: absolute;
+            width: 100vw;
+            right: 0;
+            display: none;
+        }
+    }
+}

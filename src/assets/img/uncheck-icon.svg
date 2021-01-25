@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <g id="uncheck-icon" fill="none" stroke="#fff" stroke-width="4">
+    <rect width="44" height="44" rx="13" stroke="none"/>
+    <rect x="2" y="2" width="40" height="40" rx="11" fill="none"/>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<div class="side-container justify-content-center">
+    <div class="container-blurry">
+        <h4 class="title-white">Posts</h4>
+        <div class="item-container">
+            <div *ngFor="let post of posts | slice: (activePage-1) * 10 : activePage * 10" class="container-blurry">
+                <img class="user-image" src={{getSrc(post.userId)}} alt="">
+                <h6 class="user-data">👤 {{getUsername(post.userId)}}<span> 🌎{{getLocation(post.userId)}} </span>📧 <span>{{getEmail(post.userId)}}</span> 🆔<span>{{post.userId}}</span></h6>
+                <h6 class="post-content">{{post.title}} - <span>{{post.body}}</span></h6>
+            </div>
+        </div>
+    </div>
+</div>

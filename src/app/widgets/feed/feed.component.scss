@@ -1,0 +1,97 @@
+.side-container {
+    height: 90vh;
+    width: 100%;
+    padding: 8px;
+    .container-blurry {
+        height: 100%;
+        width: 100%;
+        .title-white {
+            text-align: left;
+            margin-top: 16px;
+            margin-left: 16px;
+            color: white;
+        }
+        .item-container {
+            padding: 16px;
+            width: 100%;
+            height: calc(100% - 64px);
+            overflow-y: scroll;
+            .container-blurry {
+                height: fit-content;
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 8px;
+                cursor: pointer;
+                position: relative;
+                img {
+                    max-width: 44px;
+                    max-height: 44px;
+                    overflow: hidden;
+                    border-radius: 15px;
+                }
+                &:hover {
+                    &:before {
+                        background: rgba(255, 255, 255, 0.4);
+                        backdrop-filter: blur(10px);
+                        border-radius: 16px;
+                    }
+                }
+
+                h6 {
+                    color: white;
+                    font-size: small;
+                    span {
+                        color: rgba(255, 255, 255, 0.5);
+                    }
+
+                    &.user-data {
+                        position: relative;
+                        left: 56px;
+                        padding-right: 56px;
+                    }
+                    &.post-content {
+                        position: relative;
+                        padding-right: 56px;
+                        left: 56px;
+                    }
+                }
+                .user-image {
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 700px) {
+    // .side-container {
+    //     .container-blurry {
+    //         .item-container {
+    //             .container-blurry {
+    //                 height: 180px;
+    //                 h6 {
+    //                     color: white;
+    //                     font-size: small;
+    //                     span {
+    //                         color: rgba(255, 255, 255, 0.5);
+    //                     }
+    
+    //                     &.user-data {
+    //                         position: absolute;
+    //                         left: 56px;
+    //                         right: 16px;
+    //                     }
+    //                     &.post-content {
+    //                         position: absolute;
+    //                         left: 56px;
+    //                         top: 48px;
+    //                         right: 16px;
+    //                     }
+    //                 }
+    //                 .user-image {
+    //                     position: absolute;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+}

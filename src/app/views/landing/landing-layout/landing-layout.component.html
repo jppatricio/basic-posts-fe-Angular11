@@ -1,0 +1,35 @@
+<div class="container-fluid">
+
+  <div class="row pt-3  w-100">
+    <div class="col-3 d-flex justify-content-center">
+      <div class="open-users" (click)="toggleUsers()"><img src="../../../../assets/img/menu-icon.svg" alt=""></div>
+    </div>
+    <div class="col-6 d-flex justify-content-center">
+      <div class="floating-back" *ngIf="filteredId !== 0" (click)="filterChange(0)">↩ </div>
+      <h4 class="text-center h4-title"> Currently showing > {{currentShowingText}} </h4>
+    </div>
+    <div  class="col-3 d-flex justify-content-center">
+      <div class="open-settings" (click)="toggleSettings()"><img src="../../../../assets/img/settings-icon.svg" alt=""></div>
+    </div>
+
+  </div>
+
+  <div class="center-side">
+    <app-feed [activePage]="activePage" [filteredId]="filteredId" [users]="users" [posts]="posts"></app-feed>
+  </div>
+
+
+  <div class="left-side" [style.display]="!usersIsVisible ? 'block' : 'none'">
+
+    <app-sidebar (onFilterChange)="filterChange($event)" [users]="users"></app-sidebar>
+  </div>
+
+
+  <div class="right-side" [style.display]="!settingsIsVisible ? 'block' : 'none'">
+
+    <app-settings (onPageChange)="onPageChange($event)" (onSortChange)="onSortChange($event)"
+      [totalRecords]="posts.length" [hide]="noSort"></app-settings>
+
+  </div>
+
+</div>

@@ -1,0 +1,20 @@
+<nav>
+    <div class="side-container justify-content-center">
+        <div class="container-blurry">
+            <h4 style="text-align: center; margin-top: 16px; color: white;">Users</h4>
+            <div class="item-container">
+                <div *ngFor="let user of users" class="container-blurry">
+                    <div (click)="filterByUserId(user.id)" class="row">
+                        <div class="col-md-2">
+                            <img src={{getSrc(user.id)}} alt="">
+                        </div>
+                        <div class="col-md-10 pl-4">
+                            <h6 class="elipsis">{{user.username}} <span>{{user.address.city}}</span></h6>
+                            <h6 class="elipsis"><span>{{user.email}}</span></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
